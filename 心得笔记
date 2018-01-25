@@ -1,0 +1,11 @@
+1 最好不要修改原数据
+官方例子const squares = this.state.squares.slice();
+我们使用了 .slice() 方法来将之前的数组数据浅拷贝到了一个新的数组中，而不是修改已有的数组。你可以在 这个章节 来了解为什么不可变性在 React 当中的重要性。
+
+var player = {score: 1, name: 'Jeff'};
+
+var newPlayer = Object.assign({}, player, {score: 2});
+// Now player is unchanged, but newPlayer is {score: 2, name: 'Jeff'}
+
+// 或者使用最新的对象分隔符语法，你可以这么写：
+// var newPlayer = {...player, score: 2};
